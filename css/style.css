@@ -1,18 +1,19 @@
-section {
-    padding: 3rem 0;
-    border: 1px solid red;
-}
-
 /* Product Card */
 .product-card {
-    background-color: lightgray;
     border: 1px solid green;
+    font-size: 1.5rem;
 }
 
 /* Product Card - Common */
 .product-card a {
-    text-decoration: dotted;
+    text-decoration: underline;
     color: inherit;
+}
+
+.product-card ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
 }
 
 /* Product Card > Image-Card */
@@ -22,27 +23,117 @@ section {
 
 /* Product Card > Container */
 .product-card .pc-container {
-    padding: 1.5rem;
+    padding: 1rem 2rem;
 }
 
 /* Product Card > Container > Heading */
 .product-card .pc-container h2 {
-    
+    margin-bottom: 0.5rem;
 }
 
 /* Product Card > Container > Body-Card */
-.product-card .product-card-body {
-    padding: 1.5rem;
+.product-card .pc-container .product-card-body {
+
 }    
 
 /* Product Card > Container > Body-Card > Reviews Area */
-.product-card .product-card-body .pc-reviews {
-    color: #b7b7b7;
+.product-card .pc-container .product-card-body .pc-reviews {
+    margin-bottom: 2rem;
 }    
 
+.product-card .pc-container .product-card-body .pc-reviews .dots .dot {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background-color: #00aa6c;
+    display: inline-block;
+    vertical-align: sub;
+    font-size: 1.4rem;
+}    
+
+.product-card .pc-container .product-card-body .pc-reviews .dots a {
+    font-size: 1.5rem;
+    display: inline-block;
+}    
+
+/* Product Card > Container > Body-Card > Price Area */
+.product-card .pc-container .product-card-body .pc-price {
+    display: flex;
+    flex-wrap: wrap;
+} 
+
+/* Product Card > Container > Body-Card > Price Area > Column 1 */
+.product-card .pc-container .product-card-body .pc-price .price-col-1 {
+    flex-grow: 1;
+} 
+
+.product-card .pc-container .product-card-body .pc-price .price-col-1 .discounted-price {
+    font-weight: 700;
+    font-size: 2.6rem;
+    line-height: 2rem;
+    margin-bottom: 0.5rem;
+} 
+
+.product-card .pc-container .product-card-body .pc-price .price-col-1 .regular-price {
+    color: #cc0000;
+    text-decoration: line-through;   
+} 
+
+.product-card .pc-container .product-card-body .pc-price .price-col-1 .company-site {
+    
+} 
+
+.product-card .pc-container .product-card-body .pc-price .price-col-1 .company-site a {
+    text-decoration: none; 
+} 
+
+.product-card .pc-container .product-card-body .pc-price .price-col-1 .company-site a i {
+    font-size: 1rem;
+    transform: translateY(-0.2rem) rotate(45deg);
+} 
+
+/* Product Card > Container > Body-Card > Price Area > Column 2 */
+.product-card .pc-container .product-card-body .pc-price .price-col-2 {
+    line-height: 6rem;
+} 
+
+.product-card .pc-container .product-card-body .pc-price .price-col-2 .btn-offer {
+    background-color: #f2b203;
+    border-radius: 1.5rem;
+    padding: 1.2rem 2rem;
+    font-size: 1.7rem;
+    font-weight: 700;
+    text-decoration: none;
+} 
+
+/* Product Card > Container > Body-Card > Price Area > Column 3 */
+.product-card .pc-container .product-card-body .pc-price .price-col-3 {
+    width: 100%;
+    margin: 0.5rem 0 1.5rem;
+    line-height: 2.2rem;
+} 
+
+.product-card .pc-container .product-card-body .pc-price .price-col-3 li {
+    font-size: 1.5rem;
+} 
+
+.product-card .pc-container .product-card-body .pc-price .price-col-3 li:first-child {
+    font-size: 1.7rem;
+    font-weight: 700;
+} 
+
+.product-card .pc-container .product-card-body .pc-price .price-col-3 li span {
+    font-weight: 600;
+    font-size: 1.7rem;
+} 
 
 /* Product Card > Container > Footer-Card */
-
+.product-card-footer {
+    text-align: center;
+    padding: 0.8rem 0 0;
+    border-top: 2px solid #e2e2e2;
+    font-size: 1.5rem;
+}
 
 /******************** 
     MEDIA QUERIES 
