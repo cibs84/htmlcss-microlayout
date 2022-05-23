@@ -3,6 +3,46 @@ section {
     border: 1px solid red;
 }
 
+/* Product Card */
+.product-card {
+    background-color: lightgray;
+    border: 1px solid green;
+}
+
+/* Product Card - Common */
+.product-card a {
+    text-decoration: dotted;
+    color: inherit;
+}
+
+/* Product Card > Image-Card */
+.product-card .product-card-image img {
+    width: 100%;
+}
+
+/* Product Card > Container */
+.product-card .pc-container {
+    padding: 1.5rem;
+}
+
+/* Product Card > Container > Heading */
+.product-card .pc-container h2 {
+    
+}
+
+/* Product Card > Container > Body-Card */
+.product-card .product-card-body {
+    padding: 1.5rem;
+}    
+
+/* Product Card > Container > Body-Card > Reviews Area */
+.product-card .product-card-body .pc-reviews {
+    color: #b7b7b7;
+}    
+
+
+/* Product Card > Container > Footer-Card */
+
 
 /******************** 
     MEDIA QUERIES 
