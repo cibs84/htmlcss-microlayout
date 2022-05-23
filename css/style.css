@@ -2,6 +2,7 @@
 .product-card {
     border: 1px solid green;
     font-size: 1.5rem;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* Product Card - Common */
@@ -17,8 +18,32 @@
 }
 
 /* Product Card > Image-Card */
+.product-card .product-card-image {
+    position: relative;
+}
+
 .product-card .product-card-image img {
     width: 100%;
+    height: 25rem;
+    object-fit: cover;
+}
+
+.product-card .product-card-image .heart {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: white;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.8rem;
+    text-align: center;
+    line-height: 3.3rem;
+    border-radius: 50%;
+    transition: all 0.2s;
+}
+
+.product-card .product-card-image .heart:hover {
+    color: red;
 }
 
 /* Product Card > Container */
@@ -33,7 +58,7 @@
 
 /* Product Card > Container > Body-Card */
 .product-card .pc-container .product-card-body {
-
+    
 }    
 
 /* Product Card > Container > Body-Card > Reviews Area */
@@ -49,55 +74,67 @@
     display: inline-block;
     vertical-align: sub;
     font-size: 1.4rem;
-}    
+}  
 
 .product-card .pc-container .product-card-body .pc-reviews .dots a {
     font-size: 1.5rem;
     display: inline-block;
 }    
 
-/* Product Card > Container > Body-Card > Price Area */
-.product-card .pc-container .product-card-body .pc-price {
+.product-card .pc-container .product-card-body .pc-reviews ul li {
+    display: none;
+}   
+
+.product-card .pc-container .product-card-body .pc-reviews ul li:last-child {
+    display: unset;
+}   
+
+/* Product Card > Container > Body-Card > Prices Area */
+.product-card .pc-container .product-card-body .pc-prices {
     display: flex;
     flex-wrap: wrap;
 } 
 
-/* Product Card > Container > Body-Card > Price Area > Column 1 */
-.product-card .pc-container .product-card-body .pc-price .price-col-1 {
+/* Product Card > Container > Body-Card > Prices Area > Column 1 */
+.product-card .pc-container .product-card-body .pc-prices .prices-col-1 {
     flex-grow: 1;
 } 
 
-.product-card .pc-container .product-card-body .pc-price .price-col-1 .discounted-price {
+.product-card .pc-container .product-card-body .pc-prices .prices-col-1 .company-logo img {
+    display: none;
+}
+
+.product-card .pc-container .product-card-body .pc-prices .prices-col-1 .discounted-price {
     font-weight: 700;
     font-size: 2.6rem;
     line-height: 2rem;
     margin-bottom: 0.5rem;
 } 
 
-.product-card .pc-container .product-card-body .pc-price .price-col-1 .regular-price {
+.product-card .pc-container .product-card-body .pc-prices .prices-col-1 .regular-price {
     color: #cc0000;
     text-decoration: line-through;   
 } 
 
-.product-card .pc-container .product-card-body .pc-price .price-col-1 .company-site {
+.product-card .pc-container .product-card-body .pc-prices .prices-col-1 .company-site {
     
 } 
 
-.product-card .pc-container .product-card-body .pc-price .price-col-1 .company-site a {
+.product-card .pc-container .product-card-body .pc-prices .prices-col-1 .company-site a {
     text-decoration: none; 
 } 
 
-.product-card .pc-container .product-card-body .pc-price .price-col-1 .company-site a i {
+.product-card .pc-container .product-card-body .pc-prices .prices-col-1 .company-site a i {
     font-size: 1rem;
     transform: translateY(-0.2rem) rotate(45deg);
 } 
 
-/* Product Card > Container > Body-Card > Price Area > Column 2 */
-.product-card .pc-container .product-card-body .pc-price .price-col-2 {
+/* Product Card > Container > Body-Card > Prices Area > Column 2 */
+.product-card .pc-container .product-card-body .pc-prices .prices-col-2 {
     line-height: 6rem;
 } 
 
-.product-card .pc-container .product-card-body .pc-price .price-col-2 .btn-offer {
+.product-card .pc-container .product-card-body .pc-prices .prices-col-2 .btn-offer {
     background-color: #f2b203;
     border-radius: 1.5rem;
     padding: 1.2rem 2rem;
@@ -106,26 +143,31 @@
     text-decoration: none;
 } 
 
-/* Product Card > Container > Body-Card > Price Area > Column 3 */
-.product-card .pc-container .product-card-body .pc-price .price-col-3 {
+/* Product Card > Container > Body-Card > Prices Area > Column 3 */
+.product-card .pc-container .product-card-body .pc-prices .prices-col-3 {
     width: 100%;
     margin: 0.5rem 0 1.5rem;
     line-height: 2.2rem;
 } 
 
-.product-card .pc-container .product-card-body .pc-price .price-col-3 li {
+.product-card .pc-container .product-card-body .pc-prices .prices-col-3 li {
     font-size: 1.5rem;
 } 
 
-.product-card .pc-container .product-card-body .pc-price .price-col-3 li:first-child {
+.product-card .pc-container .product-card-body .pc-prices .prices-col-3 li:first-child {
     font-size: 1.7rem;
     font-weight: 700;
 } 
 
-.product-card .pc-container .product-card-body .pc-price .price-col-3 li span {
+.product-card .pc-container .product-card-body .pc-prices .prices-col-3 li span {
     font-weight: 600;
     font-size: 1.7rem;
 } 
+
+/* Product Card > Container > Body-Card > Secondary Prices Area */
+.product-card .pc-container .product-card-body .pc-secondary-price {
+    display: none;
+}
 
 /* Product Card > Container > Footer-Card */
 .product-card-footer {
@@ -150,4 +192,153 @@
 }
 
 /******** X-Large - ≥1200px ********/
-@media screen and (min-width: 1200px)
+@media screen and (min-width: 1200px) {
+/* Product Card */
+.product-card {
+    display: flex;
+}
+
+/* Product Card > Container */
+.product-card .pc-container {
+    padding: 2rem;
+}
+
+.product-card .pc-container h2 {
+    margin-bottom: 2rem;
+    font-size: 2.4rem;
+}
+
+.product-card .product-card-image {
+    width: 65%;
+}
+
+.product-card .product-card-image img {
+    height: 100%;
+}
+
+.product-card .pc-container .product-card-body {
+    display: flex;
+}
+
+/* Product Card > Container > Body-Card > Reviews Area */
+.product-card .pc-container .product-card-body .pc-reviews {
+    order: 3;
+    padding-left: 1.5rem;
+}
+
+.product-card .pc-container .product-card-body .pc-reviews .dots {
+    margin-bottom: 2rem;
+}  
+
+.product-card .pc-container .product-card-body .pc-reviews .dots div:last-child {
+    margin-top: 1rem;
+    line-height: 1.7rem;
+}  
+
+.product-card .pc-container .product-card-body .pc-reviews ul li {
+    margin-bottom: 0.1rem;
+    display: block;
+} 
+
+.product-card .pc-container .product-card-body .pc-reviews ul li a {
+    text-decoration: none;
+} 
+
+/* Product Card > Container > Body-Card > Prices Area */
+.product-card .pc-container .product-card-body .pc-prices {
+    display: block;
+    text-align: center;
+    padding-right: 0.5rem;
+} 
+
+.product-card .pc-container .product-card-body .pc-prices .prices-col-1 .company-logo {
+    margin: 2.5rem 0;
+}
+
+.product-card .pc-container .product-card-body .pc-prices .prices-col-1 .company-logo img {
+    width: 10rem;
+    display: inline-block;
+}
+
+.product-card .pc-container .product-card-body .pc-prices .prices-col-1 .regular-price {
+    font-size: 2.6rem;
+    line-height: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.product-card .pc-container .product-card-body .pc-prices .prices-col-1 .discounted-price {
+    line-height: 4rem;
+}
+
+.product-card .pc-container .product-card-body .pc-prices .prices-col-1 .company-site a {
+    display: none; 
+}
+
+.product-card .pc-container .product-card-body .pc-prices .prices-col-2 .btn-offer {
+    display: inline-block;
+    width: 90%;
+    line-height: normal;
+}
+
+.product-card .pc-container .product-card-body .pc-prices .prices-col-3 {
+    text-align: left;
+} 
+
+/* Product Card > Container > Body-Card > Secondary Prices Area */
+.product-card .pc-container .product-card-body .pc-secondary-price {
+    display: block;
+    border-left: 2px dotted lightgray;
+    border-right: 2px dotted lightgray;
+    padding: 1rem;
+}
+
+.product-card .pc-container .product-card-body .pc-secondary-price > * {
+    text-align: center;
+}
+
+.product-card .pc-container .product-card-body .pc-secondary-price .prices-col {
+    margin-bottom: 1.5rem;
+}
+
+.product-card .pc-container .product-card-body .pc-secondary-price .prices-col .company-site {
+    font-size: 1.5rem;
+    line-height: 1rem;
+}
+
+.product-card .pc-container .product-card-body .pc-secondary-price .prices-col .company-site a {
+    text-decoration: none;
+}
+
+.product-card .pc-container .product-card-body .pc-secondary-price .prices-col .company-site a i {
+    font-size: 1.3rem;
+    transform: translateY(-0.2rem) rotate(45deg);
+}
+
+.product-card .pc-container .product-card-body .pc-secondary-price .prices-col .regular-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.product-card .pc-container .product-card-body .pc-secondary-price .prices-col:first-child .regular-price {
+    color: #cc0000;
+}
+
+.product-card .pc-container .product-card-body .pc-secondary-price .expand-offers {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 2rem;
+}
+
+.product-card .pc-container .product-card-body .pc-secondary-price .expand-offers i {
+    display: block;
+    text-align: center;
+}
+
+
+
+/* Footer-Card */
+.product-card-footer {
+    display: none;
+}
+
+}
